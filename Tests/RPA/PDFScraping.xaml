@@ -1,0 +1,620 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="PDFScraping" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="895.333333333333,7126" sap2010:WorkflowViewState.IdRef="PDFScraping_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:ra="clr-namespace:ReporterForUiPath.Activities;assembly=ReporterForUiPath.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="39">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.Activities.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>ReporterForUiPath.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>ReporterForUiPath.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Activities.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.Activities</AssemblyReference>
+      <AssemblyReference>DevOps.Azure.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="SpecificElementExtraction" sap:VirtualizedContainerService.HintSize="905.333333333333,6961.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="GetText" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Grouping" />
+      <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="IACULIS" />
+      <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="ImageText" />
+      <Variable x:TypeArguments="x:String" Name="TabelText" />
+      <Variable x:TypeArguments="x:String" Name="ReportsPath" />
+      <Variable x:TypeArguments="sd1:DataTable" Name="RPath" />
+      <Variable x:TypeArguments="s:String[]" Name="FilePath" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="863.333333333333,6869.33333333333" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="ImageText1R" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="824.666666666667,6631.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="782.666666666667,223.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="SampleSheet.xlsx">
+                  <ui:ExcelApplicationScope.Body>
+                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468.666666666667,723.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:ExcelReadRange AddHeaders="True" DataTable="[RPath]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426.666666666667,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="A2:A3" SheetName="ReportsLocation" />
+                        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[RPath]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426.666666666667,572.666666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                          <ui:ForEachRow.Body>
+                            <ActivityAction x:TypeArguments="sd1:DataRow">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="row" />
+                              </ActivityAction.Argument>
+                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,423.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;ReportsPath : &quot; + row.Item(0).ToString]" />
+                                <Assign sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[ReportsPath]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[row.Item(0).ToString]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Testing: &quot;+ ReportsPath]" />
+                              </Sequence>
+                            </ActivityAction>
+                          </ui:ForEachRow.Body>
+                        </ui:ForEachRow>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ExcelApplicationScope.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ExcelApplicationScope>
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="782.666666666667,305.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut.Body>
+              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,226.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ra:CreateReport ContinueOnError="{x:Null}" isCreated="{x:Null}" DisplayName="Create Report" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="CreateReport_1" ReportLocation="[ReportsPath]" ReportName="PDf Scraping">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ra:CreateReport>
+              </Sequence>
+            </ui:CommentOut.Body>
+          </ui:CommentOut>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="782.666666666667,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Utilities\Connectors\ReportUtil\Reports.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="start_suite">RPA Tests</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="start_test">PDF Scraping</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="782.666666666667,5591.33333333333" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="C:\Users\Nagendra Tripathi\OneDrive\Documents\UiPath\UiPathHyperAutomate\New\UipathProject_TestAutomation\.settings\PDF Doc\file-sample.pdf">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="748.666666666667,5488.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Open the PDf in Browser" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="706.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_1" Name="Step 1 " Status="Pass" TakeScreenshot="False" />
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="706.666666666667,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                  <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Maximize the Browser " DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="706.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_2" Name="Step 2 " Status="Pass" TakeScreenshot="False" />
+                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'chrome.exe Extracting'" sap:VirtualizedContainerService.HintSize="706.666666666667,4985.33333333333" sap2010:WorkflowViewState.IdRef="WindowScope_5" InformativeScreenshot="16981001733fb42540d82be65639ac99" Selector="&lt;wnd app='chrome.exe' omit:cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                    <ui:WindowScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="672.666666666667,4839.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="630.666666666667,4747.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="588.666666666667,4655.33333333333" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="16981001733fb42540d82be65639ac99" Selector="&lt;wnd app='chrome.exe' omit:cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                              <ui:WindowScope.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="554.666666666667,4509.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[Grouping]" />
+                                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[Grouping]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="512.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_4" Name="Step 3 " Status="Pass" TakeScreenshot="False" />
+                                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'grouping'" sap:VirtualizedContainerService.HintSize="512.666666666667,155.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="right" KeyModifiers="None" SpecialKey="True">
+                                      <ui:SendHotkey.Target>
+                                        <ui:Target Element="{x:Null}" Id="3d53fd22-f72a-4a74-a93f-4d9ce0240950" InformativeScreenshot="e61a34d2a1bab6cf9786256ec8c2a660" Selector="&lt;ctrl name='file-sample.pdf' role='document' /&gt;&lt;ctrl idx='24' role='grouping' /&gt;">
+                                          <ui:Target.ClippingRegion>
+                                            <ui:Region Rectangle="459, 286, 96, 16" />
+                                          </ui:Target.ClippingRegion>
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:SendHotkey.Target>
+                                    </ui:SendHotkey>
+                                    <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Scroll the page for the text" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="512.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_5" Name="Step 4 " Status="Pass" TakeScreenshot="False" />
+                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="512.666666666667,1012" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="9449d4fbe8899ee700e4e7f44884bd95" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                                      <ui:WindowScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,866" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="Sometext" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="434,464.666666666667" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="a80252df6c32df4100b4fb0c72d6b0d4" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                                              <ui:WindowScope.Body>
+                                                <ActivityAction x:TypeArguments="x:Object">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,318.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'grouping'" sap:VirtualizedContainerService.HintSize="334,226.666666666667" sap2010:WorkflowViewState.IdRef="GetOCRText_7">
+                                                      <ui:GetOCRText.OCREngine>
+                                                        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                                          <ActivityFunc.Argument>
+                                                            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                          </ActivityFunc.Argument>
+                                                          <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="284,80.6666666666667" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[Image]" Text="[Sometext]" />
+                                                        </ActivityFunc>
+                                                      </ui:GetOCRText.OCREngine>
+                                                      <ui:GetOCRText.Target>
+                                                        <ui:Target Element="{x:Null}" Id="b007c103-f59c-4562-8206-1227803240cb" InformativeScreenshot="9db37cdde1fe3fb8f9ff636b7ec136ef" Selector="&lt;ctrl name='file-sample.pdf' role='document' /&gt;&lt;ctrl idx='24' role='grouping' /&gt;">
+                                                          <ui:Target.ClippingRegion>
+                                                            <ui:Region Rectangle="458, 284, 98, 18" />
+                                                          </ui:Target.ClippingRegion>
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                          <ui:Target.WaitForReady>
+                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                          </ui:Target.WaitForReady>
+                                                        </ui:Target>
+                                                      </ui:GetOCRText.Target>
+                                                      <ui:GetOCRText.Text>
+                                                        <OutArgument x:TypeArguments="ui:GenericValue">[Grouping]</OutArgument>
+                                                      </ui:GetOCRText.Text>
+                                                    </ui:GetOCRText>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:WindowScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:WindowScope>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[Sometext]" />
+                                            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[&quot;Get text : &quot; + Sometext]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="434,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_6" Name="Step 6 " Status="Pass" TakeScreenshot="False" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:WindowScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:WindowScope>
+                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="512.666666666667,2089.33333333333" sap2010:WorkflowViewState.IdRef="WindowScope_7" InformativeScreenshot="765c2bbf3e6e682980d628b3aaf2aeaa" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;&#xA;&lt;ctrl name='file-sample.pdf' role='document' /&gt;&#xA;&lt;ctrl name='PDF document containing 4 pages' role='document' /&gt;&#xA;&lt;ctrl name='Page 1' role='pane' /&gt;&#xA;">
+                                      <ui:WindowScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478.666666666667,1943.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="TabelOCR" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="436.666666666667,464.666666666667" sap2010:WorkflowViewState.IdRef="WindowScope_9" InformativeScreenshot="5199aff1dd07f5db674fd9a42f202901" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                                              <ui:WindowScope.Body>
+                                                <ActivityAction x:TypeArguments="x:Object">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,318.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:GetOCRText Text="{x:Null}" WordsInfo="{x:Null}" DisplayName="Get OCR Text 'pane  Page 1'" sap:VirtualizedContainerService.HintSize="334,226.666666666667" sap2010:WorkflowViewState.IdRef="GetOCRText_8">
+                                                      <ui:GetOCRText.OCREngine>
+                                                        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                                          <ActivityFunc.Argument>
+                                                            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                          </ActivityFunc.Argument>
+                                                          <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="284,80.6666666666667" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_6" Image="[Image]" Language="English (United Kingdom)" Profile="Screen" Scale="1" Text="[TabelText]" />
+                                                        </ActivityFunc>
+                                                      </ui:GetOCRText.OCREngine>
+                                                      <ui:GetOCRText.Target>
+                                                        <ui:Target Element="{x:Null}" Id="5b7b8f1e-0694-4286-913e-0bf8f0b11cd4" InformativeScreenshot="be9cfd67a6a222d22967a929cccf4df4" Selector="&lt;ctrl name='file-sample.pdf' role='document' /&gt;&lt;ctrl name='PDF document containing 4 pages' role='document' /&gt;&lt;ctrl name='Page 1' role='pane' /&gt;">
+                                                          <ui:Target.ClippingRegion>
+                                                            <ui:Region Rectangle="62, 64, 657, 269" />
+                                                          </ui:Target.ClippingRegion>
+                                                          <ui:Target.TimeoutMS>
+                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                          </ui:Target.TimeoutMS>
+                                                          <ui:Target.WaitForReady>
+                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                          </ui:Target.WaitForReady>
+                                                        </ui:Target>
+                                                      </ui:GetOCRText.Target>
+                                                    </ui:GetOCRText>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:WindowScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </ui:WindowScope>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[TabelText]" />
+                                            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[&quot;Get the Tabel Text  : &quot; +TabelText]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="436.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_12" Name="Step 7 " Status="Pass" TakeScreenshot="False" />
+                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'grouping'" sap:VirtualizedContainerService.HintSize="436.666666666667,155.333333333333" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="right" KeyModifiers="None" SpecialKey="True">
+                                              <ui:SendHotkey.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="25196871-bc56-429c-a4cd-8d6e4d79377e" InformativeScreenshot="46725388587c2385c3895357c05a9f5d" Selector="&lt;ctrl role='grouping' text='Lorem ipsum dolor sit amet, consectetur adipiscing &amp;#xD;&amp;#xA;elit. Nunc ac faucibus odio. &amp;#xD;&amp;#xA;' /&gt;&#xA;">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </ui:SendHotkey.Target>
+                                            </ui:SendHotkey>
+                                            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Scroll for the Text " DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="436.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_13" Name="Step 8 " Status="Pass" TakeScreenshot="False" />
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[Grouping]" />
+                                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436.666666666667,223.333333333333" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                              <ui:CommentOut.Body>
+                                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="WindowScope_11" InformativeScreenshot="2002e2abeea679adf53a12a73a752704" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                                                    <ui:WindowScope.Body>
+                                                      <ActivityAction x:TypeArguments="x:Object">
+                                                        <ActivityAction.Argument>
+                                                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                        </ActivityAction.Argument>
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,318.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                          <Sequence.Variables>
+                                                            <Variable x:TypeArguments="scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))" Name="Grouping" />
+                                                          </Sequence.Variables>
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'pane  Page 1'" sap:VirtualizedContainerService.HintSize="334,226.666666666667" sap2010:WorkflowViewState.IdRef="GetOCRText_10">
+                                                            <ui:GetOCRText.OCREngine>
+                                                              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                                                <ActivityFunc.Argument>
+                                                                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                                </ActivityFunc.Argument>
+                                                                <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="284,80.6666666666667" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_7" Image="[Image]" Language="English (United Kingdom)" Profile="Screen" Result="[Grouping]" Scale="1" />
+                                                              </ActivityFunc>
+                                                            </ui:GetOCRText.OCREngine>
+                                                            <ui:GetOCRText.Target>
+                                                              <ui:Target Element="{x:Null}" Id="d6ceec27-b8c1-49ca-a21d-4f53dd17be54" InformativeScreenshot="721f693fc2bd9fc302215ec27e5354e2" Selector="&lt;ctrl name='file-sample.pdf' role='document' /&gt;&lt;ctrl name='PDF document containing 4 pages' role='document' /&gt;&lt;ctrl name='Page 1' role='pane' /&gt;">
+                                                                <ui:Target.ClippingRegion>
+                                                                  <ui:Region Rectangle="287, 611, 97, 24" />
+                                                                </ui:Target.ClippingRegion>
+                                                                <ui:Target.TimeoutMS>
+                                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                                </ui:Target.TimeoutMS>
+                                                                <ui:Target.WaitForReady>
+                                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                </ui:Target.WaitForReady>
+                                                              </ui:Target>
+                                                            </ui:GetOCRText.Target>
+                                                            <ui:GetOCRText.Text>
+                                                              <OutArgument x:TypeArguments="ui:GenericValue">[PanePage]</OutArgument>
+                                                            </ui:GetOCRText.Text>
+                                                          </ui:GetOCRText>
+                                                        </Sequence>
+                                                      </ActivityAction>
+                                                    </ui:WindowScope.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:WindowScope>
+                                                </Sequence>
+                                              </ui:CommentOut.Body>
+                                            </ui:CommentOut>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="436.666666666667,94.6666666666667" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[Grouping]" />
+                                            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[&quot;Get Text  : &quot;+ Grouping]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="436.666666666667,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_14" Name="Step 9 " Status="Pass" TakeScreenshot="False" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ui:WindowScope.Body>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:WindowScope>
+                                    <Sequence DisplayName="Screen Scraping" sap:VirtualizedContainerService.HintSize="512.666666666667,556.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="ui:GenericValue" Name="Grouping" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'File samp Chrome_wi'" sap:VirtualizedContainerService.HintSize="434,464.666666666667" sap2010:WorkflowViewState.IdRef="WindowScope_12" InformativeScreenshot="a7b05ce1675271cb59c23ab5aa041fb3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                                        <ui:WindowScope.Body>
+                                          <ActivityAction x:TypeArguments="x:Object">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,318.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'grouping'" sap:VirtualizedContainerService.HintSize="334,226.666666666667" sap2010:WorkflowViewState.IdRef="GetOCRText_11">
+                                                <ui:GetOCRText.OCREngine>
+                                                  <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                                                    <ActivityFunc.Argument>
+                                                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                                    </ActivityFunc.Argument>
+                                                    <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Microsoft OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="284,80.6666666666667" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_8" Image="[Image]" Language="English (United Kingdom)" Profile="Screen" Scale="1" />
+                                                  </ActivityFunc>
+                                                </ui:GetOCRText.OCREngine>
+                                                <ui:GetOCRText.Target>
+                                                  <ui:Target Element="{x:Null}" Id="12352ba1-cf0c-4582-a0ad-b9265c2decae" InformativeScreenshot="119cf72e6a305bd04299bee70d43e68e" Selector="&lt;ctrl name='file-sample.pdf' role='document' /&gt;&lt;ctrl name='PDF document containing 4 pages' role='document' /&gt;&lt;ctrl name='Page 1' role='pane' /&gt;&lt;ctrl idx='3' role='grouping' /&gt;">
+                                                    <ui:Target.ClippingRegion>
+                                                      <ui:Region Rectangle="139, 93, 50, 21" />
+                                                    </ui:Target.ClippingRegion>
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:GetOCRText.Target>
+                                                <ui:GetOCRText.Text>
+                                                  <OutArgument x:TypeArguments="ui:GenericValue">[Grouping]</OutArgument>
+                                                </ui:GetOCRText.Text>
+                                              </ui:GetOCRText>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:WindowScope.Body>
+                                      </ui:WindowScope>
+                                    </Sequence>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:WindowScope.Body>
+                            </ui:WindowScope>
+                          </Sequence>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:WindowScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:WindowScope>
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:OpenBrowser>
+          <ui:CloseApplication DisplayName="Close Application 'Intermediate D3D Window'" sap:VirtualizedContainerService.HintSize="782.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+            <ui:CloseApplication.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1cc8d47b-bc33-4508-b0bc-6d40f9a35aba" InformativeScreenshot="efab823715825c6a00b65f93bc51dbaa" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='file-sample.pdf - Google Chrome' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:CloseApplication.Target>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:CloseApplication>
+          <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="Close the Application" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="782.666666666667,52.6666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_10" Name="Step 10 " Status="Pass" TakeScreenshot="False">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ra:StepStatus>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="829.333333333333,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ra:StepStatus ActualResult="{x:Null}" CodeBlock="{x:Null}" ContinueOnError="{x:Null}" ExpectedResult="{x:Null}" statusInfo="{x:Null}" Description="[Exception.Message]" DisplayName="Step Status" sap:VirtualizedContainerService.HintSize="334,134.666666666667" sap2010:WorkflowViewState.IdRef="StepStatus_11" Name="Step " Status="Compare" TakeScreenshot="True" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

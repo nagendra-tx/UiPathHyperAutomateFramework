@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite time="331.937" tests="2" failures="0" errors="2" cancelled="0" hostname="Desktop" id="69530" name="Automated - UipathProject_TestAutomation_Tests - 1.0.70726806-alpha.7" package="UipathProject_TestAutomation_Tests_Tests-1.0.70726806-alpha.7" timestamp="2021-03-29T14:23:58.45Z">
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\Application\Demo\Application Tests.xaml" status="Failed" time="291.047">
+      <error message="A fault occurred while executing job 40084195 for Tests\Application\Demo\Application Tests.xaml. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/69530/logs/40084195?fid=667126" type="Fault" />
+      <system-out>Test case Tests\Application\Demo\Application Tests.xaml (v1.0.70726806-alpha.7) executed as job 40084195 and took 291047ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/69530/logs/40084195?fid=667126</system-out>
+    </testcase>
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\RPA\RPA Tests.xaml" status="Failed" time="40.064">
+      <error message="A fault occurred while executing job 40084196 for Tests\RPA\RPA Tests.xaml. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/69530/logs/40084196?fid=667126" type="Fault" />
+      <system-out>Test case Tests\RPA\RPA Tests.xaml (v1.0.70726806-alpha.7) executed as job 40084196 and took 40064ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/69530/logs/40084196?fid=667126</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

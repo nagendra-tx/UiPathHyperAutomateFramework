@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite time="731.443" tests="2" failures="1" errors="0" cancelled="0" hostname="Desktop" id="65659" name="Automated - UipathProject_TestAutomation_Tests - 1.0.67176072-alpha.7" package="UipathProject_TestAutomation_Tests_Tests-1.0.67176072-alpha.7" timestamp="2021-02-16T12:04:23.017Z">
+    <testcase assertions="3" classname="UipathProject_TestAutomation_Tests" name="Tests\Application\Demo\Application Tests.xaml" status="Failed" time="548.453">
+      <failure message="Verification failed." type="Failure" />
+      <system-out>Test case Tests\Application\Demo\Application Tests.xaml (v1.0.67176072-alpha.7) executed as job 35277590 and took 548453ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65659/logs/35277590?fid=667126</system-out>
+    </testcase>
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\RPA\RPA Tests.xaml" status="Passed" time="182.217">
+      <system-out>Test case Tests\RPA\RPA Tests.xaml (v1.0.67176072-alpha.7) executed as job 35277591 and took 182217ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65659/logs/35277591?fid=667126</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

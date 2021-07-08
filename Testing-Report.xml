@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Test-Suite name="UiPath Project - Test Automation" total="2" passed="1" failures="1" execution-date="07/01/2021 04:11:27" total-time="00:00:11">
+  <Result>
+    <TestScenario>API Test - Fail</TestScenario>
+    <TestName>Fail Test</TestName>
+    <Started>07/01/2021 04:11:18</Started>
+    <Ended>07/01/2021 04:11:27</Ended>
+    <Status>FAILED</Status>
+  </Result>
+  <Result>
+    <TestScenario>API Test - Pass</TestScenario>
+    <TestName>Pass Test</TestName>
+    <Started>07/08/2021 19:17:41</Started>
+    <Ended>07/08/2021 19:17:43</Ended>
+    <Status>PASSED</Status>
+  </Result>
+</Test-Suite>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite time="130.293" tests="1" failures="0" errors="1" cancelled="0" hostname="Desktop" id="65226" name="Automated - UipathProject_TestAutomation_Tests - 1.0.66648013-alpha" package="UipathProject_TestAutomation_Tests-1.0.66648013-alpha" timestamp="2021-02-10T09:23:33.48Z">
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\Application\Demo\Application Tests.xaml" status="Failed" time="130.293">
+      <error message="A fault occurred while executing job 34379939 for Tests\Application\Demo\Application Tests.xaml. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65226/logs/34379939?fid=667126" type="Fault" />
+      <system-out>Test case Tests\Application\Demo\Application Tests.xaml (v1.0.66648013-alpha) executed as job 34379939 and took 130293ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65226/logs/34379939?fid=667126</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

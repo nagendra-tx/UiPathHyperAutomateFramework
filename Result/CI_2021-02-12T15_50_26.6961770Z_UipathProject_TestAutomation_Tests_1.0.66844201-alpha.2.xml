@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite time="311.933" tests="2" failures="0" errors="0" cancelled="0" hostname="Desktop" id="65410" name="Automated - UipathProject_TestAutomation_Tests - 1.0.66844201-alpha.2" package="UipathProject_TestAutomation_Tests-1.0.66844201-alpha.2" timestamp="2021-02-12T15:53:26.087Z">
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\RPA\RPA Tests.xaml" status="Passed" time="308.783">
+      <system-out>Test case Tests\RPA\RPA Tests.xaml (v1.0.66844201-alpha.2) executed as job 34723427 and took 308783ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65410/logs/34723427?fid=667126</system-out>
+    </testcase>
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\Application\Demo\Application Tests.xaml" status="Passed" time="1.05">
+      <system-out>Test case Tests\Application\Demo\Application Tests.xaml (v1.0.66844201-alpha.2) executed as job 34723428 and took 1050ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65410/logs/34723428?fid=667126</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,81 @@
+{
+  "GenerateCrossPlatformAttributes": false,
+  "GenerateSelectorsForInnerElements": true,
+  "Connections": [
+    {
+      "Name": "Android",
+      "Description": null,
+      "Url": "http://localhost:4723/wd/hub",
+      "PlatformName": "Android",
+      "PlatformVersion": "11",
+      "DeviceName": "Pixel_3a_API_30",
+      "SingleInstance": null,
+      "WaitForPageUpdate": true,
+      "Capabilities": {},
+      "GeoLocation": null,
+      "LoggingModel": {
+        "LoggingEnabled": false,
+        "VideoRecordingEnabled": false,
+        "RecordingTimeLimit": 600,
+        "VideoQuality": 1,
+        "CollectScreenshot": 0,
+        "CollectPageSource": 0
+      }
+    },
+    {
+      "Name": "IOS",
+      "Description": null,
+      "Url": "https://jatinderjain4:8n7sBB3RLnESyhyhq3wn@hub-cloud.browserstack.com/wd/hub",
+      "PlatformName": "iOS",
+      "PlatformVersion": "13",
+      "DeviceName": "iPhone 11 Pro",
+      "SingleInstance": null,
+      "WaitForPageUpdate": true,
+      "Capabilities": {},
+      "GeoLocation": null,
+      "LoggingModel": {
+        "LoggingEnabled": false,
+        "VideoRecordingEnabled": false,
+        "RecordingTimeLimit": 600,
+        "VideoQuality": 1,
+        "CollectScreenshot": 0,
+        "CollectPageSource": 0
+      }
+    }
+  ],
+  "Applications": [
+    {
+      "$id": "1",
+      "Name": "EriBank_Android",
+      "Description": null,
+      "Type": "App",
+      "Platforms": {
+        "Android": {
+          "Capabilities": {
+            "app": "C:\\Users\\Nagendra Tripathi\\OneDrive\\Documents\\UiPath\\UiPathHyperAutomate\\New\\UipathProject_TestAutomation\\.settings\\APK File\\eribank.apk"
+          },
+          "StartPage": null
+        }
+      }
+    },
+    {
+      "$id": "2",
+      "Name": "EriBank_iOS",
+      "Description": null,
+      "Type": "App",
+      "Platforms": {
+        "iOS": {
+          "Capabilities": {
+            "app": "bs://888d6f212aca08fa299ef0ae3e92008a4e6372fa",
+            "bundleId": "com.experitest.eribank"
+          },
+          "StartPage": ""
+        }
+      }
+    }
+  ],
+  "NormalizeSliderValue": false,
+  "IdsMaxAllowedLength": 40,
+  "LogsPath": "%TEMP%\\UiPath Mobile Automation Logs",
+  "Variables": {}
+}

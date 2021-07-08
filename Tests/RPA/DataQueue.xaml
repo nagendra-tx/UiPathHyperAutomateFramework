@@ -1,0 +1,370 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DataQueue" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="701.333333333333,1834.66666666667" sap2010:WorkflowViewState.IdRef="DataQueue_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uta="clr-namespace:UiPath.Testing.Activities;assembly=UiPath.Testing.Activities" xmlns:utat="clr-namespace:UiPath.Testing.Activities.TestData;assembly=UiPath.Testing.Activities" xmlns:ute="clr-namespace:UiPath.Testing.Enums;assembly=UiPath.Testing" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Testing.Activities.TestData</x:String>
+      <x:String>UiPath.Testing.Enums</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>ReporterForUiPath.Activities</AssemblyReference>
+      <AssemblyReference>DevOps.Azure.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Jira.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.MobileAutomation</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DataQueue" sap:VirtualizedContainerService.HintSize="570.666666666667,1630" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Add" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="getdata" />
+      <Variable x:TypeArguments="x:String" Name="First_Name" />
+      <Variable x:TypeArguments="x:String" Name="Last_Name" />
+      <Variable x:TypeArguments="x:String" Name="Email" />
+      <Variable x:TypeArguments="x:String" Name="Address" />
+      <Variable x:TypeArguments="x:String" Name="Company_Name" />
+      <Variable x:TypeArguments="x:String" Name="Role_in_company" />
+      <Variable x:TypeArguments="x:Decimal" Name="Phone_Number" />
+      <Variable x:TypeArguments="x:String" Name="R_FName" />
+      <Variable x:TypeArguments="x:String" Name="R_LName" />
+      <Variable x:TypeArguments="x:String" Name="R_CompanyName" />
+      <Variable x:TypeArguments="x:Decimal" Name="R_Phno" />
+      <Variable x:TypeArguments="x:String" Name="R_Role_In_Company" />
+      <Variable x:TypeArguments="x:String" Name="email1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="528.666666666667,1538" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[{1,2}]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492,1399.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="R_Address" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <utat:GivenName DisplayName="First Name" sap:VirtualizedContainerService.HintSize="450,22" sap2010:WorkflowViewState.IdRef="GivenName_2">
+              <utat:GivenName.GivenNameResult>
+                <OutArgument x:TypeArguments="x:String">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="R_FName" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_10" />
+                </OutArgument>
+              </utat:GivenName.GivenNameResult>
+            </utat:GivenName>
+            <utat:RandomString DisplayName="Company Name" sap:VirtualizedContainerService.HintSize="450,22" sap2010:WorkflowViewState.IdRef="RandomString_4">
+              <utat:RandomString.Case>
+                <InArgument x:TypeArguments="ute:Case">
+                  <Literal x:TypeArguments="ute:Case" sap2010:WorkflowViewState.IdRef="Literal`1_12" />
+                </InArgument>
+              </utat:RandomString.Case>
+              <utat:RandomString.Length>
+                <InArgument x:TypeArguments="x:Int32">
+                  <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_10" Value="10" />
+                </InArgument>
+              </utat:RandomString.Length>
+              <utat:RandomString.Output>
+                <OutArgument x:TypeArguments="x:String">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="R_CompanyName" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_14" />
+                </OutArgument>
+              </utat:RandomString.Output>
+            </utat:RandomString>
+            <utat:RandomNumber Decimals="{x:Null}" DisplayName="Phone Number" sap:VirtualizedContainerService.HintSize="450,22" sap2010:WorkflowViewState.IdRef="RandomNumber_3" Output="[R_Phno]">
+              <utat:RandomNumber.Max>
+                <InArgument x:TypeArguments="x:Int64">
+                  <Literal x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="Literal`1_5" Value="1000000000" />
+                </InArgument>
+              </utat:RandomNumber.Max>
+              <utat:RandomNumber.Min>
+                <InArgument x:TypeArguments="x:Int64">
+                  <Literal x:TypeArguments="x:Int64" sap2010:WorkflowViewState.IdRef="Literal`1_14" />
+                </InArgument>
+              </utat:RandomNumber.Min>
+            </utat:RandomNumber>
+            <utat:RandomString DisplayName="Role In Company" sap:VirtualizedContainerService.HintSize="450,22" sap2010:WorkflowViewState.IdRef="RandomString_3">
+              <utat:RandomString.Case>
+                <InArgument x:TypeArguments="ute:Case">
+                  <Literal x:TypeArguments="ute:Case" sap2010:WorkflowViewState.IdRef="Literal`1_1" />
+                </InArgument>
+              </utat:RandomString.Case>
+              <utat:RandomString.Length>
+                <InArgument x:TypeArguments="x:Int32">
+                  <Literal x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="Literal`1_6" Value="15" />
+                </InArgument>
+              </utat:RandomString.Length>
+              <utat:RandomString.Output>
+                <OutArgument x:TypeArguments="x:String">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="R_Role_In_Company" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_11" />
+                </OutArgument>
+              </utat:RandomString.Output>
+            </utat:RandomString>
+            <utat:Address City="[Nothing]" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Address_2">
+              <utat:Address.AddressResult>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">
+                  <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="R_Address" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_1" />
+                </OutArgument>
+              </utat:Address.AddressResult>
+              <utat:Address.Country>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_3">USA</Literal>
+                </InArgument>
+              </utat:Address.Country>
+            </utat:Address>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="450,192" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <utat:RandomString Case="LowerCase" DisplayName="Random String" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="RandomString_5" Length="10">
+                    <utat:RandomString.Output>
+                      <OutArgument x:TypeArguments="x:String">
+                        <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="R_Address" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_2" />
+                      </OutArgument>
+                    </utat:RandomString.Output>
+                  </utat:RandomString>
+                </Sequence>
+              </ui:CommentOut.Body>
+            </ui:CommentOut>
+            <utat:RandomString DisplayName="Emailid" sap:VirtualizedContainerService.HintSize="450,22" sap2010:WorkflowViewState.IdRef="RandomString_1" Length="10" Output="[email1]">
+              <utat:RandomString.Case>
+                <InArgument x:TypeArguments="ute:Case">
+                  <Literal x:TypeArguments="ute:Case" sap2010:WorkflowViewState.IdRef="Literal`1_13" />
+                </InArgument>
+              </utat:RandomString.Case>
+            </utat:RandomString>
+            <utat:LastName sap:VirtualizedContainerService.HintSize="450,22" sap2010:WorkflowViewState.IdRef="LastName_1" LastNameResult="[R_LName]" />
+            <uta:AddTestDataQueueItem ContinueOnError="{x:Null}" DisplayName="Add Test Data Queue Item" sap:VirtualizedContainerService.HintSize="450,573" sap2010:WorkflowViewState.IdRef="AddTestDataQueueItem_2" ShowOutputArgumentCheckBoxes="True">
+              <uta:AddTestDataQueueItem.ArgumentsBridgeActivityCollection>
+                <scg:List x:TypeArguments="ActivityFunc(x:Object)" Capacity="0" />
+              </uta:AddTestDataQueueItem.ArgumentsBridgeActivityCollection>
+              <uta:AddTestDataQueueItem.Items>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="First_Name" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[First_Name]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="R_FName" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_13" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="Last_Name" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Last_Name" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_1" />
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[R_LName]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_14" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="Email" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Email" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_2" />
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[email1+"@gmail.com"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_15" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="Address" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Address]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="R_Address.ElementAt(0).Value+&quot;, &quot;+R_Address.ElementAt(1).Value.ToString" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_16" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="Company_Name" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Company_Name" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_7" />
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[R_CompanyName]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_17" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="Role_in_company" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Role_in_company]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[R_Role_In_Company]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_18" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+                <uta:ActivityItemContainer PropertiesSelectedIndex="0">
+                  <uta:ActivityItemContainer.Activity>
+                    <Assign DisplayName="Phone_Number" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Decimal">
+                          <mva:VisualBasicReference x:TypeArguments="x:Decimal" ExpressionText="Phone_Number" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_4" />
+                        </OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Decimal">
+                          <mva:VisualBasicValue x:TypeArguments="x:Decimal" ExpressionText="R_Phno" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
+                        </InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </uta:ActivityItemContainer.Activity>
+                  <uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                    <ActivityFunc x:TypeArguments="x:Object">
+                      <uta:ArgumentsBridge Input="{x:Null}" sap2010:WorkflowViewState.IdRef="ArgumentsBridge_21" />
+                    </ActivityFunc>
+                  </uta:ActivityItemContainer.ArgumentsBridgeActivity>
+                </uta:ActivityItemContainer>
+              </uta:AddTestDataQueueItem.Items>
+              <uta:AddTestDataQueueItem.QueueName>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="Literal`1_2">userdet</Literal>
+                </InArgument>
+              </uta:AddTestDataQueueItem.QueueName>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uta:AddTestDataQueueItem>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

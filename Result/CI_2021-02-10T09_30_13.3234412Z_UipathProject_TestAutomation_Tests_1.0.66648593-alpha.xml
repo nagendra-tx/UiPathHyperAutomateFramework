@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+  <testsuite time="656.23" tests="2" failures="0" errors="1" cancelled="0" hostname="Desktop" id="65227" name="Automated - UipathProject_TestAutomation_Tests - 1.0.66648593-alpha" package="UipathProject_TestAutomation_Tests-1.0.66648593-alpha" timestamp="2021-02-10T09:33:10.643Z">
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\RPA\RPA Tests.xaml" status="Passed" time="211.304">
+      <system-out>Test case Tests\RPA\RPA Tests.xaml (v1.0.66648593-alpha) executed as job 34381134 and took 211304ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65227/logs/34381134?fid=667126</system-out>
+    </testcase>
+    <testcase assertions="0" classname="UipathProject_TestAutomation_Tests" name="Tests\Application\Demo\Application Tests.xaml" status="Failed" time="442.893">
+      <error message="A fault occurred while executing job 34381135 for Tests\Application\Demo\Application Tests.xaml. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65227/logs/34381135?fid=667126" type="Fault" />
+      <system-out>Test case Tests\Application\Demo\Application Tests.xaml (v1.0.66648593-alpha) executed as job 34381135 and took 442893ms. Logs are available at https://cloud.uipath.com/testisltfbgw/TestingXpertsDefault/test/executions/65227/logs/34381135?fid=667126</system-out>
+    </testcase>
+  </testsuite>
+</testsuites>
