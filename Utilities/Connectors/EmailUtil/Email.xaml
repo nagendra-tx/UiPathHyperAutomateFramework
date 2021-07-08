@@ -72,6 +72,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" AttachCurrentReport="False" DisplayName="Send Email Status (SMTP)" From="testingtx2020@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_1" IsEmailSent="[Email_Send]" Password="Testing@123" Port="587" Server="smtp.gmail.com" Subject="Testing" To="nagendra.tripathi19@testingxperts.com" />
+    <ra:SendEmailStatus BCC="{x:Null}" CC="{x:Null}" ContinueOnError="{x:Null}" AttachCurrentReport="False" DisplayName="Send Email Status (SMTP)" From="testingtx2020@gmail.com" sap:VirtualizedContainerService.HintSize="334,85.3333333333333" sap2010:WorkflowViewState.IdRef="SendEmailStatus_1" IsEmailSent="[Email_Send]" Password="Testing@123" Port="587" Server="smtp.gmail.com" Subject="Testing" To="nagendra.tripathi1990@testingxperts.com" />
   </Sequence>
 </Activity>
